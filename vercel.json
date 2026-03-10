@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "eu-crypto-tracker",
+  "public": true,
+  "framework": "nextjs"
+}
