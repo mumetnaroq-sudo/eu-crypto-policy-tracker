@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export configuration
-  output: 'export',
-  distDir: 'dist',
+  // SSR configuration for Vercel (enables API routes)
   trailingSlash: true,
-  // Disable image optimization for static export
+  // Disable image optimization for compatibility
   images: {
     unoptimized: true,
   },
