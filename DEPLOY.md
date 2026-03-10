@@ -81,8 +81,14 @@ After deployment, verify:
 # Development
 npm run dev
 
-# Production build
-npm run build
+# Production build (NODE_ENV must be production)
+NODE_ENV=production npm run build
 
 # Build output is in dist/
 ```
+
+## Build Notes
+
+- **NODE_ENV**: Must be set to `production` for successful build. Development mode causes issues with Next.js document rendering.
+- **API Routes**: The `/api/*` routes are not available in static export mode. The frontend imports data directly from source files, so this doesn't affect functionality.
+- **Static Export**: Configured in `next.config.js` with `output: 'export'` and `distDir: 'dist'`
